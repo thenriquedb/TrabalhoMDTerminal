@@ -25,12 +25,10 @@ int main(int argc, char** argv) {
         exit(EXIT_FAILURE);
     }
 
-    /*
+    /*********************************
     * Parametros recebidos pelo argv
-    */
+    ******************************** */
     
-    
-
     /* Semente utilizada na geração de valores aleatorios   */
     int seed = atoi(argv[1]); 
     
@@ -42,19 +40,20 @@ int main(int argc, char** argv) {
     char arqEntrada[20];
     strcpy (arqEntrada,argv[3]);
     
+
     /* Nome do arquivo log de saida */
     char arqSaida[20];
     strcpy (arqSaida,argv[4]);
 
+
     /* Porcentagem de difusão */
     int porcentagem = atoi(argv[5]); //Porcentagem do grafo a ser atingida, passado por parametro
 
-  /*
-    printf("Seed: %d \n",atoi(argv[1]));
+      printf("Seed: %d \n",atoi(argv[1]));
     printf("METODO: %s \n",metodo);
     printf("ArqE: %s \n",arqEntrada);
     printf("ArqS: %s \n",arqSaida);
-    printf("P: %d \n",porcentagem); */
+    printf("P: %d \n",porcentagem); 
 
     srand(seed);
     int dsize; // Armazena a quantidade de nos pegos nos procedimentos guloso e aleatorio
@@ -68,7 +67,6 @@ int main(int argc, char** argv) {
 
     coletar_caracteristicasGrafo(file);
     alocarMatriz(file);
-
 
     if (strcmp(metodo,"g") == 0) {
         dsize = procedimento_Guloso(porcentagem);

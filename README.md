@@ -1,2 +1,0 @@
-# TrabalhoMDTerminal
-# TrabalhoMDTerminal

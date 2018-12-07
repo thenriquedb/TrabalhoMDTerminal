@@ -42,10 +42,10 @@ void gerarArquivoDot() {
                  fprintf(pDot, "%d -> %d [color=red];\n", i, j);
             }
         }
-
-        fprintf(pDot, "}");
     }
 
+
+    fprintf(pDot, "}");
     free(nosFonte);
     fclose(pDot);
 }
@@ -58,20 +58,19 @@ void gerarArquivoDot() {
     void gerarArquivoLog(char* arqE,char* arqS, long int seed, char* method, int dsize) {
 
     nosCoord* nosFonte = returnNosFontes();
-    structGraph graph;
+    structGraph graph = returnGraph();
     char line[300];
 
     FILE* pLog = fopen(arqS, "a");
-printf("saida: %s \n",arqS);
     if (pLog == NULL) {
         printf("Erro ao gerar o arquivo log. \n");
         exit(EXIT_FAILURE);
     } else
-        fprintf(pLog, "INSTANCE\t\tNODES\t\tARCS\t\tSEED\t\tMETHOD\t\tDSIZE\n");
+     //   fprintf(pLog, "INSTANCE\t\tNODES\t\tARCS\t\tSEED\t\tMETHOD\t\tDSIZE\n");
 
     fgets(line, 300, pLog);
     printf("line: %s \n",line);
-    fprintf(pLog, "%s\t%3d\t%3d\t%3ld\t%s\t%3d\n", arqE, graph.nos, graph.arcos, seed, method, dsize);
+    fprintf(pLog, "%s\t%3d\t%5d\t%5ld\t%s\t%5d\n", arqE, graph.nos, graph.arcos, seed, method, dsize);
 
 
     fclose(pLog);

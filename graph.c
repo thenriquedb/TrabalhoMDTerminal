@@ -56,6 +56,7 @@ void coletar_caracteristicasGrafo(FILE* file) {
 
 /*******************************************************************************
  *Realiza a alocação da matriz em memória 
+ @param arquivo do grafo
  *******************************************************************************/
 void alocarMatriz(FILE* file) {
 
@@ -63,7 +64,6 @@ void alocarMatriz(FILE* file) {
                   * possa ser lido novamente. */
 
     graph.matriz = malloc(graph.nos * (sizeof (int*)));
-
     for (int i = 0; i < graph.nos; i++) {
         graph.matriz[i] = malloc(graph.nos * (sizeof (int)));
     }
@@ -253,4 +253,3 @@ structGraph returnGraph() {
 nosCoord * returnNosFontes() {
     return nosFontes;
 }
-
