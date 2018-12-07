@@ -1,2 +1,14 @@
-graphEDIT.txt	  6	    6	 1000	a	    2
-graphEDIT.txt	  6	    6	 1000	a	    2
+INSTANCE			NODES		ARCS		SEED			METHOD			DSIZE
+arquivos/graph2.txt	  450		17874			 8170			a			   32
+arquivos/graph2.txt	  450		17874			30432			a			   32
+arquivos/graph2.txt	  450		17874			10615			a			   30
+arquivos/graph2.txt	  450		17874			29323			a			   29
+arquivos/graph2.txt	  450		17874			 6604			a			   32
+arquivos/graph2.txt	  450		17874			15983			a			   30
+arquivos/graph2.txt	  450		17874			 9416			a			   33
+arquivos/graph2.txt	  450		17874			20654			a			   30
+arquivos/graph2.txt	  450		17874			 2434			a			   29
+arquivos/graph3.txt	 1400		109401			  143			a			   68
+arquivos/graph3.txt	 1400		109401			15644			a			   64
+arquivos/graph3.txt	 1400		109401			13793			a			   63
+arquivos/graph3.txt	 1400		109401			25059			a			   72

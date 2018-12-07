@@ -55,23 +55,28 @@ void gerarArquivoDot() {
 /****************************************************************************************
 * Gera o arquivo LOG
 *****************************************************************************************/
-    void gerarArquivoLog(char* arqE,char* arqS, long int seed, char* method, int dsize) {
+
+void gerarArquivoLog(char* arqE,char* arqS, long int seed, char* method, int dsize) {
 
     nosCoord* nosFonte = returnNosFontes();
     structGraph graph = returnGraph();
-    char line[300];
 
-    FILE* pLog = fopen(arqS, "a");
+FILE* pLog;
+pLog = fopen(arqS, "r"); 
+
     if (pLog == NULL) {
-        printf("Erro ao gerar o arquivo log. \n");
-        exit(EXIT_FAILURE);
-    } else
-     //   fprintf(pLog, "INSTANCE\t\tNODES\t\tARCS\t\tSEED\t\tMETHOD\t\tDSIZE\n");
+        pLog = fopen(arqS, "w");
+        if(pLog == NULL) {
+            printf("Erro ao gerar o arquivo log. \n");
+            exit(EXIT_FAILURE);
+        }
+        fprintf(pLog, "INSTANCE\t\t\tNODES\t\tARCS\t\tSEED\t\t\tMETHOD\t\t\tDSIZE\n");
+    }
+             
+        pLog = fopen(arqS, "a");
+        fprintf(pLog, "%s\t%5d\t\t%5d\t\t\t%5ld\t\t\t%s\t\t\t%5d\n", arqE, graph.nos, graph.arcos, seed, method, dsize);
 
-    fgets(line, 300, pLog);
-    printf("line: %s \n",line);
-    fprintf(pLog, "%s\t%3d\t%5d\t%5ld\t%s\t%5d\n", arqE, graph.nos, graph.arcos, seed, method, dsize);
 
-
-    fclose(pLog);
+    
+    //fclose(pLog);
 }

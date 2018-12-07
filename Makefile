@@ -1,5 +1,5 @@
 main:	main.o	graph.o testes.o saida.o
-		gcc	 main.o	graph.o	testes.o saida.o -o main.exe
+		gcc	 main.o	graph.o	testes.o saida.o -o pdif-solver
 		rm *.o
 
 main.o:

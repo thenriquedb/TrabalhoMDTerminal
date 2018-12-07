@@ -18,8 +18,9 @@
 #include "headers/testes.h"
 #include "headers/arquivoDOT.h"
 
-int main(int argc, char** argv) {
 
+int main(int argc, char** argv) {
+printf("arc: %d \n",argc);
     if(argc != 6) {
         printf("Quantidade de parametros incorretas. \n");
         exit(EXIT_FAILURE);
@@ -49,11 +50,11 @@ int main(int argc, char** argv) {
     /* Porcentagem de difusão */
     int porcentagem = atoi(argv[5]); //Porcentagem do grafo a ser atingida, passado por parametro
 
-      printf("Seed: %d \n",atoi(argv[1]));
-    printf("METODO: %s \n",metodo);
-    printf("ArqE: %s \n",arqEntrada);
-    printf("ArqS: %s \n",arqSaida);
-    printf("P: %d \n",porcentagem); 
+     // printf("Seed: %d \n",atoi(argv[1]));
+   // printf("METODO: %s \n",metodo);
+   // printf("ArqE: %s \n",arqEntrada);
+   // printf("ArqS: %s \n",arqSaida);
+   // printf("P: %d \n",porcentagem); 
 
     srand(seed);
     int dsize; // Armazena a quantidade de nos pegos nos procedimentos guloso e aleatorio
