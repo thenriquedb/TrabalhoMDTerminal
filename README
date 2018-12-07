@@ -1,0 +1,24 @@
+Prezado Usuário
+
+O programa a seguir foi desenvolvido na intenção de simular uma solução para o Problema da Mínima Difusão Parcial em Grafos Direcionados, para executar basta clicar com o botão direto do mouse dentro da pasta onde se encontra o programa, clicar em "Abrir Terminal", digitar: make <semente> <p-difusao> <metodo> <entrada> <saida>
+
+Onde: 
+<semente>: valor inteiro de semente informada pelo usuário que será usada
+para inicializar o gerador de números aleatórios;
+
+<p-difusao>: valor correspondente à p-difusão alvo, ou seja, qual é o valor
+percentual p de nós que devem ser atingidos na rede para considerar a difusão
+bem sucedida;
+
+<metodo>: caracter que indica qual método utilizar: ‘g’ para algoritmo guloso,
+‘a’ para método aleatório;
+
+<entrada>: nome do arquivo de entrada contendo a descrição de um grafo no
+formato ASCII DIMACS;
+
+<saida>: nome do arquivo de saída gerado automaticamente pelo aplicativo
+e que contêm o log dos calculos realizados.
+
+João Pedro Mendonça de Souza - 0035330
+Thiago Henrique Domingues Botelho - 0041149
+
