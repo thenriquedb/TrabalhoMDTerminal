@@ -15,8 +15,20 @@
 #define TESTES_H
 
 
-
+/********************************************************************************
+* O procedimento guloso consite em pegar sempre o nó de maior transitividade e veri-
+* ficar se o percentual desejado já foi atingido.
+* @param porcentagem que deseja atingir
+*********************************************************************************/
 int procedimento_Guloso(float p);
+
+/********************************************************************************
+* Procedimento aleatorio consite pegar um nó qualquer e verificar sua difusão. Em
+* seguida adciona-lo em um conjunto S de solução e verificar se o percentual desejado
+* ja foi atingido.
+* @param semente para gerar número aleatorio
+* @param percentual de difusão que deseja atingir . 
+*********************************************************************************/
 int procedimento_Aleatorio(long int seed, float p);
 
 #endif /* TESTES_H */
